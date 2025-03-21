@@ -29,7 +29,7 @@ export type Show = {
 	next24ShowtimesCount: number;
 	notComingSoon: boolean;
 	originalReleaseAt: string | null;
-	posterPath: Record<string, unknown>;
+	posterPath: Record<string, string>;
 	releaseAt: string[];
 	salesOpeningDatetime: string | null;
 	showRef: string;

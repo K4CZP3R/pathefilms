@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Content } from "./content";
 
 export default async function Page() {
@@ -7,5 +8,9 @@ export default async function Page() {
     },
   }).then((res) => res.json());
 
-  return <Content shows={shows} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Content shows={shows} />
+    </Suspense>
+  );
 }

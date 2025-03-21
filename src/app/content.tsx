@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Badge } from "@/components/ui/badge";
@@ -123,7 +124,7 @@ export function Content({ shows }: { shows: ShowsResponse }) {
             <CardContent className="flex-1 p-4">
               {show.posterPath?.lg ? (
                 <img
-                  src={show.posterPath?.lg}
+                  src={show.posterPath.lg}
                   alt={show.title}
                   className="w-full h-[400px] object-cover rounded-lg"
                 />
